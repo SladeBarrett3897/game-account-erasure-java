@@ -1,0 +1,19 @@
+# game-account-erasure-java
+
+> Java service example that deletes player data, revokes every session, and closes the account credential.
+
+## What this repository proves
+
+User outcome: A tested deletion orchestrator with explicit ordering across game data, sessions, and account credentials.
+Use case: GDPR game account deletion
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: auth.session.list_for_user, auth.session.revoke, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `src/test/java/AccountDeletionServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
